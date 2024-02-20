@@ -50,14 +50,14 @@ The system should enable export of consolidated snapshots to MyMedicalData throu
 
 #### Data Frequency:
 
-HR: Capture heart rate data every 500ms.
-BP: Capture blood pressure data every hour.
-O2: Capture oxygen level data every 5 seconds.
-Blood sugar: Capture blood sugar data every 2 minutes.
-Respiration: Capture respiration rate data every second.
-ECG: Capture electrocardiogram data every second.
-Body temp: Capture body temperature data every 5 minutes.
-Sleep status: Capture sleep status data every 2 minutes.
+- HR: Capture heart rate data every 500ms.
+- BP: Capture blood pressure data every hour.
+- O2: Capture oxygen level data every 5 seconds.
+- Blood sugar: Capture blood sugar data every 2 minutes.
+- Respiration: Capture respiration rate data every second.
+- ECG: Capture electrocardiogram data every second.
+- Body temp: Capture body temperature data every 5 minutes.
+- Sleep status: Capture sleep status data every 2 minutes.
 
 #### Deployment:
 
