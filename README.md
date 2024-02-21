@@ -68,3 +68,55 @@ Deploy as an on-premises solution with a maximum of 500 patients per installatio
 No specific compliance requirements are specified.
 
 These requirements outline the functionality and performance expectations for the MonitorMe solution.
+
+## Actors and Actions
+
+#### Actor: Vital Sign Device
+
+- Publish vital sign reading to MonitorMe
+
+#### Actor: MonitorMe System
+
+- Read vital sign reading from device
+- Record reading in database
+- Analyze reading based on threshold/trends
+- Mark reading as Normal/Warning/Critical
+- Notify health care professional if reading is in Alert state
+- Record patient history
+- Display patient history
+- Display vital sign reading in Consolidated Monitoring Screen
+
+#### Actor: Nurse
+
+- Monitors patient data
+- Responds to alerts
+
+## Architectural Characteristics
+
+#### Reliability
+
+"The patient trusts that the software will not fail and will consistently monitor their vital signs to ensure their well-being."
+
+#### Fault Tolerance
+
+"The patient feels secure knowing that even if a device fails, the software will continue to monitor their vital signs without interruption."
+
+#### Performance
+
+"The patient expects timely and accurate updates on their vital signs, ensuring prompt medical attention when needed."
+
+#### Responsiveness
+
+"The patient appreciates the software's quick response to any changes in their vital signs, providing reassurance and peace of mind."
+
+#### Availability
+
+"The patient relies on the software to be readily accessible, ensuring continuous monitoring of their health status around the clock."
+
+#### Data Integrity
+
+"The patient takes comfort from the fact that their vital sign data is secure and accurate, maintaining confidence in the effectiveness of their treatment."
+
+#### Interoperability
+
+"The patient benefits from seamless integration with other medical devices, ensuring comprehensive and coordinated care."
