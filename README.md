@@ -131,6 +131,28 @@ The patient benefits from seamless integration with other medical devices, ensur
 
 ![Architecture diagram](/images/ArchDiagram.jpg)
 
+- Queues
+  - Facilitates asynchronous communication of vital sign readings.
+- Inbound Reading Validator
+  - Filters noise using proprietary StayHealthy algorithms.
+- Reading Recorder
+  - Records a vital sign reading in the cache and the database.
+- Cache
+  - Stores single-point values of the latest vital sign readings.
+  - Stores snapshots of point-in-time consolidated readings.
+- Readings Context Classifier
+  - Applies thresholds to readings and classifies readings as Normal, Warning, or Critical.
+- Alert Notifier
+  - Pushes alert notifications to subscribers.
+- Current Readings Retriever
+  - Retrieves the most recent vital sign readings for a specific patient, enabling real-time monitoring and assessment of their current health status.
+- Batch Readings Retriever
+  - Retrieves holistic snapshot request.
+- Patient Device Assignment Recorder
+  - Records the assignment of a patient to a device.
+- Snapshot Consolidated Readings Generator
+  - Generates a consolidate reading for exporting to MyMedicalData.
+
 ## Architecture Decision Records (ADRs)
 
 - [Choosing an Architectural Communication Pattern](/ADRs/01-CommunicationPattern-UsingEventPubSub.md)
