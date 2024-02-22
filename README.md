@@ -126,3 +126,7 @@ The patient benefits from seamless integration with other medical devices, ensur
 ## Nurse Station Consolidated Monitoring Screen Mockup
 
 ![Mockup of monitoring screen](/images/Mockup.jpg)
+
+## Architecture Diagram
+
+![Architecture diagram](/images/ArchDiagram.jpg)
