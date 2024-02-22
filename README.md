@@ -122,3 +122,7 @@ The patient takes comfort from the fact that their vital sign data is secure and
 #### Interoperability
 
 The patient benefits from seamless integration with other medical devices, ensuring comprehensive and coordinated care.
+
+## Nurse Station Consolidated Monitoring Screen Mockup
+
+![Mockup of monitoring screen](/images/Mockup.jpg)
