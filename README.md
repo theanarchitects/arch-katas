@@ -8,9 +8,9 @@ In response to the growing demand for advanced medical monitoring solutions, Sta
 
 ## The Vision
 
-The vision behind MonitorMe is to offer hospitals a sophisticated yet user-friendly vital signs monitoring system that empowers healthcare professionals to provide superior patient care. Built on the foundation of _"The Patient Comes First,"_ MonitorMe combines advanced technology with intuitive design to set a new standard in medical monitoring, enhancing patient outcomes and streamlining clinical workflows.
+The vision behind MonitorMe is to offer hospitals a sophisticated yet user-friendly vital signs monitoring system that empowers healthcare professionals to provide superior patient care. Built on the foundation of _The Patient Comes First,_ MonitorMe combines advanced technology with intuitive design to set a new standard in medical monitoring, enhancing patient outcomes and streamlining clinical workflows.
 
-[![An introduction to StayHealthy devices](/images/StayHealthy.jpg)]
+![An introduction to StayHealthy devices](/images/StayHealthy.jpg)
 
 ## Requirements
 
@@ -97,28 +97,28 @@ These requirements outline the functionality and performance expectations for th
 
 #### Reliability
 
-"The patient trusts that the software will not fail and will consistently monitor their vital signs to ensure their well-being."
+The patient trusts that the software will not fail and will consistently monitor their vital signs to ensure their well-being.
 
 #### Fault Tolerance
 
-"The patient feels secure knowing that even if a device fails, the software will continue to monitor their vital signs without interruption."
+The patient feels secure knowing that even if a device fails, the software will continue to monitor their vital signs without interruption.
 
 #### Performance
 
-"The patient expects timely and accurate updates on their vital signs, ensuring prompt medical attention when needed."
+The patient expects timely and accurate updates on their vital signs, ensuring prompt medical attention when needed.
 
 #### Responsiveness
 
-"The patient appreciates the software's quick response to any changes in their vital signs, providing reassurance and peace of mind."
+The patient appreciates the software's quick response to any changes in their vital signs, providing reassurance and peace of mind.
 
 #### Availability
 
-"The patient relies on the software to be readily accessible, ensuring continuous monitoring of their health status around the clock."
+The patient relies on the software to be readily accessible, ensuring continuous monitoring of their health status around the clock.
 
 #### Data Integrity
 
-"The patient takes comfort from the fact that their vital sign data is secure and accurate, maintaining confidence in the effectiveness of their treatment."
+The patient takes comfort from the fact that their vital sign data is secure and accurate, maintaining confidence in the effectiveness of their treatment.
 
 #### Interoperability
 
-"The patient benefits from seamless integration with other medical devices, ensuring comprehensive and coordinated care."
+The patient benefits from seamless integration with other medical devices, ensuring comprehensive and coordinated care.
