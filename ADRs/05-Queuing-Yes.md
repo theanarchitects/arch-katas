@@ -1,6 +1,6 @@
 ## Title
 
-On the use of queues
+On the Use of Queues
 
 ## Context
 
