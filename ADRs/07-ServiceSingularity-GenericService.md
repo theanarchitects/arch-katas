@@ -1,6 +1,6 @@
 ## Title
 
-Decision on Service Architecture for Vital Signs Handling
+Decision on Service Architecture
 
 ## Context
 
