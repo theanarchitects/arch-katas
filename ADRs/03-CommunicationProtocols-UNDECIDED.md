@@ -1,11 +1,9 @@
 # Title
-Choosing communication protocols 
+
+Choosing Communication Protocols
 
 ## Context
 
-
 ## Decision
-
-
 
 ## Consequences, Trade-Offs, and Impacts
