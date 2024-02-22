@@ -1,6 +1,6 @@
 ## Title
 
-To cache or not to cache
+To Cache or Not to Cache
 
 ## Context
 
