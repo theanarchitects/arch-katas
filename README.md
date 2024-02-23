@@ -1,4 +1,4 @@
-# StayHealthy, Inc
+# MonitorMe by StayHealthy, Inc
 
 _The Patient Comes First_
 
