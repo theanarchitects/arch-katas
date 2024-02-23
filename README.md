@@ -159,6 +159,8 @@ Hospital IT must be able to deploy this hardware, implement the MonitorMe system
   - Records the assignment of a patient to a device.
 - Snapshot Consolidated Readings Generator
   - Generates a consolidate reading for exporting to MyMedicalData.
+ 
+![Systems diagram](/images/SystemsDiagram.png)  
 
 ## Architecture Decision Records (ADRs)
 
