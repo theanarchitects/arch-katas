@@ -10,7 +10,7 @@ In response to the growing demand for advanced medical monitoring solutions, Sta
 
 The vision behind MonitorMe is to offer hospitals a sophisticated yet user-friendly vital signs monitoring system that empowers healthcare professionals to provide superior patient care. Built on the foundation of _The Patient Comes First,_ MonitorMe combines advanced technology with intuitive design to set a new standard in medical monitoring, enhancing patient outcomes and streamlining clinical workflows.
 
-![An introduction to StayHealthy devices](/images/StayHealthy.jpg)
+![An introduction to StayHealthy devices](/images/ContextDiagram.png)
 
 ## Requirements
 
@@ -29,10 +29,15 @@ Achieve an average response time of 1 second or less, ensuring vital signs are a
 #### Display Rotation:
 
 The monitoring screen should display each patient’s vital signs, rotating between patients every 5 seconds.
+When an alert is received, the monitoring screen should switch to that patient.
 
 #### Patient Limit:
 
 The system should support a maximum of 20 patients per nurse's station.
+
+#### Deployment:
+
+Deploy as an on-premises solution with a maximum of 500 patients per installation.
 
 #### Data Storage:
 
@@ -61,10 +66,6 @@ The system should enable export of consolidated snapshots to MyMedicalData throu
 - Body temp: Capture body temperature data every 5 minutes.
 - Sleep status: Capture sleep status data every 2 minutes.
 
-#### Deployment:
-
-Deploy as an on-premises solution with a maximum of 500 patients per installation.
-
 #### Compliance:
 
 No specific compliance requirements are specified.
@@ -72,6 +73,12 @@ No specific compliance requirements are specified.
 These requirements outline the functionality and performance expectations for the MonitorMe solution.
 
 ## Actors and Actions
+
+#### Actor: Nurse
+
+- Connect vital sign monitoring devices to the patient and associate them with the patient's identity
+- Monitor patient data using consolidated monitoring screen
+- Respond to alerts displayed on consolidated monitoring screen
 
 #### Actor: Vital Sign Device
 
@@ -88,40 +95,40 @@ These requirements outline the functionality and performance expectations for th
 - Display patient history
 - Display vital sign reading in Consolidated Monitoring Screen
 
-#### Actor: Nurse
+#### Actor: Medical Professionals
 
-- Monitors patient data
-- Responds to alerts
+- Review patient vitals history, filtering on time range as well as vial sign
+- Receive alert push notifications for potential problems
+- Generate holistic snapshots of patient vital signs
+- Upload vital sign snapshots to MyMedicalData
+
 
 ## Architectural Characteristics
 
-#### Reliability
+#### Data Integrity 
 
-The patient trusts that the software will not fail and will consistently monitor their vital signs to ensure their well-being.
-
-#### Fault Tolerance
-
-The patient feels secure knowing that even if a device fails, the software will continue to monitor their vital signs without interruption.
+The patient trusts that the software will not fail and will consistently monitor their vital signs to ensure their well-being. Each component in the MonitorMe system must ensure integrity of vital sign readings and compensate for potential sources of error. To this effect, all device readings received over the network are validated for legibility, patient identification, and null values caused by disconnected devices. Prior to validation, readings are stored in a durable queue to ensure none are lost. After validation, readings are synchronously recorded in the database via writes to a high speed cache service before the next reading is processed. The cache can then ensure data integriry with asynchronous writes to the underlying database. 
 
 #### Performance
 
-The patient expects timely and accurate updates on their vital signs, ensuring prompt medical attention when needed.
-
-#### Responsiveness
-
-The patient appreciates the software's quick response to any changes in their vital signs, providing reassurance and peace of mind.
+The patient expects timely and accurate updates on their vital signs, ensuring prompt medical attention when needed. Each MonitorMe installation is designed to support a defined number of vital sign devices and number of patients. Processes with specific performance needs, such as the Current Readings Retriever which delivers patient vital sign information to the Nurse Station, are separated from other processes such as the Batch Readings Retriever. All Database connections with performance requirements are fronted with caches. 
 
 #### Availability
 
-The patient relies on the software to be readily accessible, ensuring continuous monitoring of their health status around the clock.
+The patient relies on the software to be readily accessible, ensuring continuous monitoring of their health status around the clock. Healthcare doesn't sleep and neither does MonitorMe, with availability targets of 99.99%. 
 
-#### Data Integrity
+#### Fault Tolerance
 
-The patient takes comfort from the fact that their vital sign data is secure and accurate, maintaining confidence in the effectiveness of their treatment.
+The patient feels secure knowing that even if a component fails, the software will continue to monitor their vital signs without interruption. Faulty vital sign devices are identified by the Inbound Reading Validator and Nurses can replace the device at the point of care. MonitorMe services are installed on servers in an active/passive primary/secondary configuration, with automatic failover in case of server fault. StayHealthy recommends installing the secondary MonitorMe server in a physically diverse location from the primary server to ensure maximum fault tolerance from physical disruption, while still meeting network performance requirements.
 
-#### Interoperability
+#### Responsiveness
 
-The patient benefits from seamless integration with other medical devices, ensuring comprehensive and coordinated care.
+The patient appreciates the software's quick response to any changes in their vital signs, providing reassurance and peace of mind. Nurses appreciate quick information updates and alerts. The system need to meet defined requirements for speed of updates and alerts. 
+
+#### Deployability
+
+Hospital IT must be able to deploy this hardware, implement the MonitorMe system, and maintain the technology. 
+
 
 ## Nurse Station Consolidated Monitoring Screen Mockup
 
@@ -129,7 +136,7 @@ The patient benefits from seamless integration with other medical devices, ensur
 
 ## Architecture Diagram
 
-![Architecture diagram](/images/ArchDiagram.jpg)
+![Architecture diagram](/images/ArchitectureDiagram.png)
 
 - Queues
   - Facilitates asynchronous communication of vital sign readings.
