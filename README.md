@@ -157,7 +157,7 @@ The patient benefits from seamless integration with other medical devices, ensur
 
 - [Choosing an Architectural Communication Pattern](/ADRs/01-CommunicationPattern-UsingEventPubSub.md)
 - [Preferred Communication Direction](/ADRs/02-CommunicationDirection-Push.md)
-- [Choosing Ccommunication Protocols](/ADRs/03-CommunicationProtocols-UNDECIDED.md)
+- [Choosing Communication Protocols](/ADRs/03-CommunicationProtocols-UNDECIDED.md)
 - [To Cache or Not to Cache](/ADRs/04-Caching-Yes.md)
 - [On the Use of Queues](/ADRs/05-Queuing-Yes.md)
 - [Choosing a datastore, or more!](/ADRs/06-Datastores-UNDECIDED.md)
